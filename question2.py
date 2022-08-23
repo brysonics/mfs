@@ -17,7 +17,6 @@ headers = {"Content-Type": "application/json"}
 response = requests.post(create_booking_url, headers=headers, json=request_json)
 print(response.content)
 
-
 # parse response into json
 response_json = json.loads(response.text)
 
@@ -32,7 +31,6 @@ get_booking_url = f"https://restful-booker.herokuapp.com/booking/{first_booking_
 response1 = requests.get(get_booking_url)
 print(response1.content)
 
-
 # create_token
 
 create_token_url = "https://restful-booker.herokuapp.com/auth"
@@ -42,7 +40,6 @@ json_token = file.read()
 # convert into json
 request_json_token = json.loads(json_token)
 # make post request to get token
-
 response_token = requests.post(create_token_url, json=request_json_token)
 # parse response into json
 response_token_json = json.loads(response_token.text)
